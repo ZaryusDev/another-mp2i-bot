@@ -114,7 +114,7 @@ class PlanningHelper(
         colloscope = self.colloscopes[class_]
 
         sorted_colles = cm.get_group_upcoming_colles(colloscope.colles, str(group))
-        output_text = f"### __Liste des {min(nb, len(sorted_colles), 12 )} prochaines Colles du groupe {group} :__\n"
+        output_text = f"### __Liste des {min(nb, len(sorted_colles), 12 )} prochaines Colles du groupe {group} ({class_}) :__\n"
 
         for i in range(min(nb, len(sorted_colles), 12)):
             date = sorted_colles[i].long_str_date
